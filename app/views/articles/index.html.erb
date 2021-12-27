@@ -1,11 +1,11 @@
-<div class="container mx-auto" id="content_container">
+<div class="container mx-auto content_container">
 <h1>Articles</h1>
 
 <p>
 There are <%= Article.public_count %> articles and counting!
 </p>
 
-<ul>
+<ul id="articles-list">
   <% @articles.each do |article| %>
     <% unless article.archived? %>
       <li>
@@ -15,7 +15,7 @@ There are <%= Article.public_count %> articles and counting!
   <% end %>
 </ul>
 
-<%= link_to "New Article", new_article_path %>
+<%= link_to "New Article", new_article_path, :class => "btn btn-primary" %>
 
 </div>
 

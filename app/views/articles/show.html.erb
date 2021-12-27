@@ -1,18 +1,20 @@
-<div class="container">
-<h1><%= @article.title %></h1>
+<div class="container content_container">
 
-<p><%= @article.body %></p>
+<div class="blog-post">
+  <h1 class="blog-post-title"><%= @article.title %></h1>
+  <p><%= @article.body %></p>
+</div>
 
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article),
+<ul class="article-edit-delete">
+  <li><%= link_to "Edit", edit_article_path(@article), :class => "btn btn-primary btn-sm" %></li>
+  <li><%= link_to "Delete", article_path(@article),
                   method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
+                  data: { confirm: "Are you sure?" }, :class => "btn btn-danger btn-sm"%></li>
 </ul>
 
 <h2>Comments</h2>
 <%= render @article.comments %>
 
-<h2>Add a comment:</h2>
+<h2>Add a Comment:</h2>
 <%= render 'comments/form' %>
 </div>
