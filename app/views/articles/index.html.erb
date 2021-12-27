@@ -1,7 +1,8 @@
+<div class="container">
 <h1>Articles</h1>
 
 <p>
-There are <&= Article.public_count %> articles and counting!
+There are <%= Article.public_count %> articles and counting!
 </p>
 
 <ul>
@@ -15,3 +16,6 @@ There are <&= Article.public_count %> articles and counting!
 </ul>
 
 <%= link_to "New Article", new_article_path %>
+
+</div>
+
