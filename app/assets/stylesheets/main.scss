@@ -11,3 +11,15 @@
     margin: 0;
     display: inline;
 }
+
+.blog-post {
+    border-radius: 1.5em;
+    // border: 1px solid gray;
+    box-shadow: 0px 15px 10px -15px #111;
+    padding: 5em;
+    margin-bottom: 3em;
+}
+
+.comments {
+    margin: 3em 0 3em 0;
+}
